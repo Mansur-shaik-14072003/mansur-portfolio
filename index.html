@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mansur Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+  <div class="logo">Mansur</div>
+
+  <ul class="nav-links">
+  <li><a href="#home">Home</a></li>
+  <li><a href="#about">About</a></li>
+  <li><a href="#skills">Skills</a></li>
+  <li><a href="#projects">Projects</a></li>
+  <li><a href="#contact">Contact</a></li>
+</ul>
+
+
+  <div class="menu-toggle" id="menu-toggle">
+    ☰
+  </div>
+</nav>
+
+
+<header>
+  <h1>Mansur Shaik</h1>
+  <p>Full Stack Developer</p>
+  <button>Download Resume</button>
+</header>
+
+<section class="about" id="about">
+
+  <div class="about-container">
+
+    <!-- LEFT TEXT -->
+    <div class="about-text">
+      <h2>About Me</h2>
+
+      <p>
+        I am a passionate and self-motivated aspiring Full Stack Developer with a
+        strong foundation in web development and problem-solving. I build responsive
+        web applications using HTML, CSS, JavaScript, React, and Python.
+      </p>
+
+      <p>
+        I am currently improving my Data Structures & Algorithms and building real
+        world projects to strengthen my development skills. I enjoy learning new
+        technologies and turning ideas into real applications.
+      </p>
+
+      <p>
+        I am looking for an opportunity as a Junior Developer or Intern where I can
+        contribute, learn from experienced developers, and grow professionally.
+      </p>
+
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <div class="about-image">
+      <div class="circle-bg">
+        <img src="mansur.jpg" alt="profile">
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="skills" id="skills">
+  <h2>Skills</h2>
+
+  <div class="skills-marquee">
+    <div class="skills-track">
+
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>JavaScript</span>
+      <span>React</span>
+      <span>Node.js</span>
+      <span>MongoDB</span>
+      <span>Java</span>
+      <span>Python</span>
+
+      <!-- duplicate for infinite scroll -->
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>JavaScript</span>
+      <span>React</span>
+      <span>Node.js</span>
+      <span>MongoDB</span>
+      <span>Java</span>
+      <span>Python</span>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="projects">
+  <h2>Projects</h2>
+
+  <div class="card">
+    <h3>Email Spam Detection</h3>
+    <p>Machine learning project using Python</p>
+  </div>
+
+  <div class="card">
+    <h3>Blog Website</h3>
+    <p>MERN stack blog app</p>
+  </div>
+
+</section>
+
+<section class="contact" id="contact">
+  <h2>Contact Me</h2>
+
+  <div class="contact-container">
+
+    <!-- LEFT INFO -->
+    <div class="contact-info">
+      <h3>Let's work together</h3>
+      <p>
+        I'm open to internships, junior developer roles, and freelance
+        opportunities. Feel free to contact me anytime.
+      </p>
+
+      <p><strong>Email:</strong> mansur@email.com</p>
+      <p><strong>Location:</strong> India</p>
+
+      <div class="socials">
+        <a href="#">LinkedIn</a>
+        <a href="#">GitHub</a>
+        <a href="#">Twitter</a>
+      </div>
+    </div>
+
+    <!-- RIGHT FORM -->
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+  </div>
+</section>
+
+<script>
+const links = document.querySelectorAll(".nav-links a");
+
+links.forEach(link => {
+  link.addEventListener("click", function(e){
+    e.preventDefault();
+
+    const targetId = this.getAttribute("href");
+    const targetSection = document.querySelector(targetId);
+
+    if(!targetSection) return;
+
+    const navbarHeight = document.querySelector(".navbar").offsetHeight;
+
+    const sectionTop =
+      targetSection.offsetTop - navbarHeight;
+
+    window.scrollTo({
+      top: sectionTop,
+      behavior: "smooth"
+    });
+  });
+});
+</script>
+
+
+   
+
+</body>
+</html>
