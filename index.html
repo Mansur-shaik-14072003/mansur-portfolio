@@ -27,7 +27,9 @@
 <header id="home">
   <h1>Mansur Shaik</h1>
   <p>Full Stack Developer</p>
-  <button>Download Resume</button>
+  <button class="download-btn" onclick="downloadResume()">
+  Download Resume
+</button>
 </header>
 
 <section class="about" id="about">
@@ -183,6 +185,12 @@ links.forEach(link => {
     });
   });
 });
+  function downloadResume() {
+  const link = document.createElement("a");
+  link.href = "resume.pdf";
+  link.download = "Resume.pdf";
+  link.click();
+}
 </script>
 
 
@@ -190,3 +198,4 @@ links.forEach(link => {
 
 </body>
 </html>
+
