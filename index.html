@@ -7,7 +7,7 @@
 
 <body>
     <nav class="navbar">
-  <div class="logo"> Shaik Mansur</div>
+  <div class="logo">Mansur</div>
 
   <ul class="nav-links">
   <li><a href="#home">Home</a></li>
@@ -27,7 +27,8 @@
 <header id="home">
   <h1>Mansur Shaik</h1>
   <p>Full Stack Developer</p>
-  <button class="download-btn" onclick="downloadResume()">
+  <!-- <button>Download Resume</button> -->
+   <button class="download-btn" onclick="downloadResume()">
   Download Resume
 </button>
 </header>
@@ -127,6 +128,32 @@
   </div>
 
 </section>
+<!-- certification's -->
+ <section class="certifications" id="certifications">
+  <h2>Certifications</h2>
+
+  <div class="cert-container">
+
+    <div class="cert-card">
+      <h3>Full Stack Web Development with MERN stack and GenAI</h3>
+      <p>Learned HTML, CSS, JavaScript, React, Node.js, express.js and MongoDB.</p>
+      <a href="https://www.udemy.com/certificate/UC-a6753b26-5070-4974-aff4-076b5f88cbf5/" target="_blank">View Certificate</a>
+    </div>
+
+    <div class="cert-card">
+      <h3>Figma UI/UX Design</h3>
+      <p>Learned Figma UI/UX design, prototyping, and wireframing.</p>
+      <a href="https://infyspringboard.onwingspan.com/public-assets/infosysheadstart/cert/lex_auth_01350157153928806410244/1-0f68b278-f0ea-4ce8-aad6-4e370ce4d6ea.pdf" target="_blank">View Certificate</a>
+    </div>
+
+    <div class="cert-card">
+      <h3>Deloite Australia-Data Analytics job simulation</h3>
+  
+      <a href="https://www.theforage.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_69df4351c84bef251e874867_1776245050862_completion_certificate.pdf" target="_blank">View Certificate</a>
+    </div>
+
+  </div>
+</section>
 
 <section class="contact" id="contact">
   <h2>Contact Me</h2>
@@ -185,7 +212,7 @@ links.forEach(link => {
     });
   });
 });
-  function downloadResume() {
+function downloadResume() {
   const link = document.createElement("a");
   link.href = "resume.pdf";
   link.download = "Resume.pdf";
@@ -198,5 +225,3 @@ links.forEach(link => {
 
 </body>
 </html>
-
-
